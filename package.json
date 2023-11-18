@@ -1,7 +1,7 @@
 {
-  "name": "react-native-easy-modal",
+  "name": "react-native-easy-custom-modal",
   "version": "0.1.0",
-  "description": "No more headache with react native easy modal ! ",
+  "description": "No more headache with react native easy custom modal ! ",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/src/index.d.ts",
@@ -26,7 +26,7 @@
     "!**/.*"
   ],
   "scripts": {
-    "example": "yarn workspace react-native-easy-modal-example",
+    "example": "yarn workspace example",
     "test": "jest",
     "typecheck": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
@@ -37,7 +37,15 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "modal",
+    "easy",
+    "simple",
+    "custom",
+    "react-native-modal",
+    "react-native-easy-custom-modal",
+    "typescript",
+    "animation"
   ],
   "repository": "https://github.com/FrSenpai/react-native-easy-modal",
   "author": "Rilakkuma <alexandre.parjouet.pro@gmail.com> (https://github.com/FrSenpai)",
