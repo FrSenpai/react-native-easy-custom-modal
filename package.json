@@ -156,5 +156,8 @@
         }
       ]
     ]
+  },
+  "dependencies": {
+    "react-native-animatable": "^1.4.0"
   }
 }
