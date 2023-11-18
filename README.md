@@ -1,11 +1,11 @@
-# react-native-easy-modal
+# react-native-easy-custom-modal
 
-No more headache with react native easy modal ! 
+No more headache with react native easy custom modal ! 
 
 ## Installation
 
 ```sh
-npm install react-native-easy-modal
+npm install react-native-easy-custom-modal --save
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ export default function App() {
 
 import React from 'react';
 import { View, Text, Pressable, StyleSheet } from 'react-native';
-import { CustomModal, ModalContext } from 'react-native-easy-modal';
+import { CustomModal, ModalContext } from 'react-native-easy-custom-modal';
 export const Example = () => {
     const { openModal, closeModal, modal: { visible } } = React.useContext(ModalContext);
     const onPress = () => {
