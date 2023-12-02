@@ -1,7 +1,7 @@
 {
   "name": "react-native-easy-custom-modal",
-  "version": "0.2.2",
-  "description": "No more headache with react native easy custom modal ! ",
+  "version": "0.1.0",
+  "description": "No more headache with react native easy custom modal !",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/src/index.d.ts",
@@ -26,7 +26,7 @@
     "!**/.*"
   ],
   "scripts": {
-    "example": "yarn workspace example",
+    "example": "yarn workspace react-native-easy-custom-modal-example",
     "test": "jest",
     "typecheck": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
@@ -37,23 +37,15 @@
   "keywords": [
     "react-native",
     "ios",
-    "android",
-    "modal",
-    "easy",
-    "simple",
-    "custom",
-    "react-native-modal",
-    "react-native-easy-custom-modal",
-    "typescript",
-    "animation"
+    "android"
   ],
-  "repository": "https://github.com/FrSenpai/react-native-easy-modal",
-  "author": "Rilakkuma <alexandre.parjouet.pro@gmail.com> (https://github.com/FrSenpai)",
+  "repository": "https://github.com/FrSenpai/react-native-easy-custom-modal",
+  "author": "FrSenpai <alexandre.parjouet.pro@gmail.com> (https://github.com/FrSenpai)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/FrSenpai/react-native-easy-modal/issues"
+    "url": "https://github.com/FrSenpai/react-native-easy-custom-modal/issues"
   },
-  "homepage": "https://github.com/FrSenpai/react-native-easy-modal#readme",
+  "homepage": "https://github.com/FrSenpai/react-native-easy-custom-modal#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
@@ -166,6 +158,8 @@
     ]
   },
   "dependencies": {
-    "react-native-animatable": "^1.4.0"
+    "moti": "^0.27.2",
+    "react-native-gesture-handler": "^2.14.0",
+    "react-native-reanimated": "3.3.0"
   }
 }

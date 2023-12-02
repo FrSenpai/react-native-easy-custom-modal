@@ -1,9 +1,7 @@
-import { ModalProvider as MP, ModalContext as MC } from "./ModalProvider";
-import { CustomModal as CM} from "./CustomModal";
-export function multiply(a: number, b: number): Promise<number> {
-  return Promise.resolve(a * b);
-}
+import { ModalContext as MC } from './ModalContext'
+import { ModalProvider as MP } from './ModalProvider'
+import type { MProps } from './types/MProps'
 
-export const ModalProvider = MP
 export const ModalContext = MC
-export const CustomModal = CM
+export const ModalProvider = MP
+export type ModalProps = MProps

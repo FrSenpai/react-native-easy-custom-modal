@@ -2,7 +2,7 @@
   "compilerOptions": {
     "rootDir": ".",
     "paths": {
-      "react-native-easy-modal": ["./src/index"]
+      "react-native-easy-custom-modal": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
