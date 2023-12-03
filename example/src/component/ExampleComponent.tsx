@@ -1,21 +1,24 @@
 import React from "react"
 import { ModalContext } from "react-native-easy-custom-modal"
-import { TouchableOpacity, Text, View } from "react-native"
+import { TouchableOpacity, Text } from "react-native"
+import { ExampleModalComponent } from "./ExampleModalComponent"
+
 export const ExampleComponent = () => {
-    const { setModalProps, openModal } = React.useContext(ModalContext)
+    const { setModalProps, modal } = React.useContext(ModalContext)
+    const onPressOpenModal = () => {
+      setModalProps({
+        component: <ExampleModalComponent />,
+        visible: true
+      })
+    }
+
+    React.useEffect(() => {
+      console.log(modal)
+    }, [modal])
+
     return (
-        <TouchableOpacity onPress={() => {
-            setModalProps({
-              component: (
-                <View style={{height: 150, width: '100%'}}>
-                  <Text>Modal HERE</Text>
-                </View>
-              ),
-              visible: true
-            })
-            openModal()
-          }}>
-            <Text>Open Modal</Text>
-          </TouchableOpacity>
+        <TouchableOpacity onPress={onPressOpenModal}>
+            <Text>Press here to open modal 🤯</Text>
+        </TouchableOpacity>
     )
 }
