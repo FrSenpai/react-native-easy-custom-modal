@@ -5,9 +5,7 @@ import type { MProps } from './types/MProps'
 export const ModalContext = createContext({
     openModal: () => {},
     closeModal: () => {},
-    setModalProps: (props: Partial<MProps>) => {
-        console.log(props)
-    },
+    setModalProps: (_props: Partial<MProps>) => {},
     modal: {
         visible: false,
         onClose: () => {},
