@@ -2,24 +2,39 @@ import React from "react";
 import { Modal, Pressable} from "react-native";
 import type { MProps } from "./types/MProps";
 import { MotiView, useAnimationState } from "moti";
+import type { LayoutChangeEvent } from "react-native";
 
 export const CustomModal = ({ component, visible, onClose, styles, animation }: MProps) => {
+	const  [height, setHeight] = React.useState(0);
 	const animationState = useAnimationState({
 		close: {
-		  scale: [1, 0.5, 0],
+			transition: {
+				duration: animation?.duration || 800, 
+				type: "timing",
+			},
+			translateY: height,
 		},
 		open: {
 			transition: {
-				duration: animation?.duration || 1000, 
+				duration: animation?.duration || 800, 
+				type: "timing",
 			},
-			
 			translateY: 0,
 		},
 	  })
 
 	const onPressToCloseModal = () => {
 		animationState.transitionTo("close");
-		onClose();
+	}
+
+	const closeOnDidAnimate = () => {
+		if (animationState.current === "close") {
+			onClose();
+		}
+	}
+
+	const onLayoutModalContent = (e: LayoutChangeEvent) => {
+		setHeight(e.nativeEvent.layout.height);
 	}
 
 	React.useEffect(() => {
@@ -37,12 +52,10 @@ export const CustomModal = ({ component, visible, onClose, styles, animation }: 
 				onPress={onPressToCloseModal}
 				style={styles.wrapper}>
 				<MotiView state={animationState}
-					from={{
-						translateY: 300,
-						
-					}}
+					from={{ translateY: height }}
+					onDidAnimate={closeOnDidAnimate}
 					style={[styles.wrapper, { backgroundColor: "transparent" }]}>
-					<Pressable style={styles.container}>
+					<Pressable onLayout={onLayoutModalContent} style={styles.container}>
 						{component}
 					</Pressable>
 				</MotiView>
