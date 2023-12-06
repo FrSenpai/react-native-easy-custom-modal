@@ -12,10 +12,6 @@ export const ExampleComponent = () => {
       })
     }
 
-    React.useEffect(() => {
-      console.log(modal)
-    }, [modal])
-
     return (
         <TouchableOpacity onPress={onPressOpenModal}>
             <Text>Press here to open modal 🤯</Text>
